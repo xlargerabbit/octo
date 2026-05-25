@@ -1,0 +1,7 @@
+session.md
+.octo/sessions/*/log.txt
+.octo/sessions/*/pid
+.octo/sessions/*/state.md
+__pycache__
+.octo
+.tinyspec
