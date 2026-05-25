@@ -2,15 +2,13 @@
 name: add
 description: >
   Create a new task — single-step or multi-step across one or more repos.
-  Replaces /backlog-add, /decompose, and /saga.
-  Use when the user wants to queue work: "add a task", "I want to build X", "/add".
+  Use when the user wants to queue work: "add a task", "I want to build X", "/add", "implement", "fix bug", "refactor", "build a feature".
 ---
 
 # Add
 
 Interviews the user and writes a task file to `.octo/tasks/<id>.md`.
 A task has one or more steps; each step targets one repo with a clear done condition.
-Multi-step tasks replace both /decompose (single-repo sequences) and /saga (multi-repo sequences).
 
 ## Steps
 

@@ -34,20 +34,11 @@ if ! git -C "$REPO_PATH" checkout -b "$BRANCH" 2>&1; then
   exit 1
 fi
 
-# Detect available AI CLI and set appropriate flags
-if command -v copilot &>/dev/null; then
-  AI_CLI="copilot"
-  AI_FLAGS="--autopilot --allow-all --max-autopilot-continues 20"
-elif command -v claude &>/dev/null; then
-  AI_CLI="claude"
-  AI_FLAGS="--dangerously-skip-permissions"
-else
-  echo "Error: neither 'copilot' nor 'claude' CLI found in PATH" >&2
-  exit 1
-fi
+AI_CLI="claude"
+AI_FLAGS="--dangerously-skip-permissions"
 
 echo "Launching ${AI_CLI} for $BRANCH ..."
-setsid timeout 1800 ${AI_CLI} ${AI_FLAGS} -p "$(cat "$SESSION_MD")" \
+nohup timeout 1800 ${AI_CLI} ${AI_FLAGS} -p "$(cat "$SESSION_MD")" \
   > "${RUN_DIR}/log.txt" 2>&1 &
 PID=$!
 

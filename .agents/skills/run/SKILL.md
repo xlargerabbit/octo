@@ -2,8 +2,7 @@
 name: run
 description: >
   Run a task end-to-end: spawn the agent, monitor progress, collect results, retry on crash.
-  Replaces /spawn, /status, /respawn, and /results.
-  Use when user says "/run <id>", "run this task", "check on <id>", "what happened to <id>",
+  Use when user says "/run <id>", "run this task", "check on <id>", "what happened to <id>", "execute <id>",
   "is <id> done", or wants to resume/retry a running or failed task.
 ---
 

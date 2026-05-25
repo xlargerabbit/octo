@@ -1,8 +1,7 @@
 ---
 name: sync-template
 description: >
-  Surfaces drift between a managed repo's agent-setup files (CLAUDE.md,
-  .claude/settings.json) and the current version of the template it was
+  Surfaces drift between a managed repo's agent-setup files (CLAUDE.md, AGENTS.md, .claude/settings.json) and the current version of the template it was
   created from. Shows a diff and optionally applies updates.
 ---
 
@@ -36,6 +35,7 @@ description: >
 
 6. Compare the template's `agent-setup/` files against the repo's current files:
    ```bash
+   diff templates/<template>/agent-setup/AGENTS.md <repo-path>/AGENTS.md
    diff templates/<template>/agent-setup/CLAUDE.md <repo-path>/CLAUDE.md
    diff templates/<template>/agent-setup/.claude/settings.json <repo-path>/.claude/settings.json
    ```

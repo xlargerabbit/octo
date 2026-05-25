@@ -1,8 +1,7 @@
 ---
 name: ls
 description: >
-  List all tasks with status and step-level detail. Replaces /backlog-list.
-  Use when user says "/ls", "list tasks", "show tasks", "what's queued", "what's running".
+  List all tasks with status and step-level detail.Use when user says "/ls", "list tasks", "show tasks", "what's queued", "what's running".
 ---
 
 # Ls
